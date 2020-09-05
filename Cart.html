@@ -1,0 +1,82 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Cart</title>
+<link rel = "stylesheet" type = "text/css" href = "decoration.css">
+</head>
+<body>
+<script>function validateform(){  
+     var book=document.myform.book.value;  
+     var quantity=document.myform.quantity.value;  
+  
+if ( book==null ||  book==""){  
+  alert("select book ");  
+  return false;  
+} 
+else if(quantity==null ||quantity==""){
+	alert("quantity should not be empty");
+	return false;
+}
+
+}
+  </script>
+
+<div class="topnav">
+  <a class="active" href="homepage.html">Home</a>
+  
+  <a href="login.html">LOGIN</a>
+  
+  <a href="register.html">SIGNUP</a>
+  
+  <a href="UserProfile.html">PROFILE</a>
+  
+  <a href="bookscatalog.html">BooksCatalog</a>
+  <a href="Cart.html">Cart</a>
+  <a href="Payment.html">Payment</a>
+  
+ </div>
+
+<center><h1>
+Shopping Cart</h1></center>
+<br><br><br><br><br>
+<table align="center">
+<tr>
+<td>Text Books</td>
+<td>
+
+<form name="myform" method="post" action="payment.html" onsubmit="return validateform()" >
+
+ <select name="book">
+<option value="">Select the book ...</option>
+<option value="PPS(c)">PPS(c)
+<option value="C++">C++
+<option value="JAVA">Java
+<option value="Oracle">Oracle
+<option value="Ms SQL Server">Ms SQL Server
+<option value="MySql">MySql
+<option value="DB2">DB2
+<option value="MongoDB">MongoDB
+<option value="Web technologies">Web technologies
+<option value="Python">Python</select>
+</td></tr>
+<tr>
+<td>
+Quantity</td>
+<td>
+<input type="number" id="q" name ="quantity">
+</td></tr>
+<tr>
+<td></td>
+<td>
+
+<input type="submit" value=ok />
+</form>
+</td></tr>
+</table>
+<center>
+
+</center>
+
+</body>
+</html>
+
