@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>REGISTER</title>
+</head>
+<body>
+<body>
+<script>function validateform(){  
+     var name=document.myform.name.value;  
+     var password=document.myform.password.value; 
+     var cpassword =document.myform.cpassword.value;
+     var email = document.myform.email.value;
+     var Username=document.myform.Username.value;  
+
+      if (name==null || name==""){  
+    	    alert("Name can't be blank");  
+    	     return false;  
+    	} 
+      else if(email == null || email ==""){
+    	   	alert("Please enter Email");
+    	   	return false;
+    	   }
+      else if ( Username==null ||  Username==""){  
+  	    alert(" Username can't be blank");  
+  	     return false;  
+  	} 
+     else if(password==null || password==""){
+    		alert("Please enter password");
+    		return false;
+    	}
+     else if(password.length<6){  
+   	  alert("Password must be at least 6 characters long.");  
+   	  return false;  
+   	  } 
+   else if(cpassword==null || cpassword==""){
+   	alert("Confirm Password should not be empty");
+   	return false;
+   }
+   else if(cpassword != password){
+   	alert("Confirm Password and Password should be same");
+   	return false;
+   }
+}
+
+  </script>
+<link rel="stylesheet" type="text/css" href="decoration.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@1,200&display=swap" rel="stylesheet">
+
+<div class="topnav">
+  <a class="active" href="homepage.html">Home</a>
+  
+  <a href="login.html">LOGIN</a>
+  
+  <a href="register.html">SIGNUP</a>
+  
+  <a href="UserProfile.html">PROFILE</a>
+  
+  <a href="bookscatalog.html">BooksCatalog</a>
+  <a href="Cart.html">Cart</a>
+  
+  <a href="Payment.html">Payment</a>
+  
+ </div>
+ <br>
+
+
+<div class="block b1"><h2>Register</h2></div>
+<div class = "survey">
+
+
+<form action="login.html" method ="post" name ="myform" onsubmit="return validateform()" >
+<div ><p>Name</p><input type="text" placeholder="Enter  name"  name = "name"class="border" ></div>
+
+<div><p>Email</p><input type="email" placeholder="Enter  Email"  name = "email" class="border" ></div>
+
+
+
+
+<p>UserName</p><input class = "border" type = "text"  name = "Username" placeholder=" Enter UserName">
+
+
+<p>Password</p><input class = "border" type = "password" name = "password" placeholder=" Enter your Password">
+<p>Confirm Password</p><input class = "border" type = "password" name ="cpassword" placeholder=" Enter your Password">
+
+<div><input type="submit"  value = "Submit" class="submit"></div>
+</div>
+</form>
+
+
+
+</body>
+</html>
