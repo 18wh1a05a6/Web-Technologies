@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel = "stylesheet" type = "text/css" href = "decoration.css">
+<title>Payment</title>
+
+</head>
+
+<script>function validateform(){  
+     var amount =document.myform.amount.value;  
+     var cnum=document.myform.cnum.value; 
+     var ifsc =document.myform.ifsc.value;
+     var expirydate = document.myform.expiry.value;
+     var address =document.myform.address.value;
+    
+      if (amount==null || amount==""){  
+    	    alert("enter amount ..");  
+    	     return false;  
+    	} 
+      else if(cnum == null || cnum ==""){
+    	   	alert("Please enter Card Number");
+    	   	return false;
+    	   }
+      else if (ifsc==null ||  ifsc ==""){  
+  	    alert(" enter ifsc ");  
+  	     return false;  
+  	} 
+     else if(expirydate ==null || expirydate ==""){
+    		alert("Please enter Expiry Month and year");
+    		return false;
+    	}
+
+    else if(address ==null || address==""){
+		alert("Please enter Address");
+		return false;
+	}
+
+}
+</script>
+<body>
+<div class="topnav">
+  <a class="active" href="homepage.html">Home</a>
+  
+  <a href="login.html">LOGIN</a>
+  
+  <a href="register.html">SIGNUP</a>
+  
+  <a href="UserProfile.html">PROFILE</a>
+  
+  <a href="bookscatalog.html">BooksCatalog</a>
+  <a href="Cart.html">Cart</a>
+  
+  <a href="Payment.html">Payment</a>
+  
+ </div>
+ 
+ 
+ 
+ <br><br>
+<center><h1>PAYMENT</h1></center>
+
+<br><br><br><br><br>
+<table align="center">
+<tr>
+<td>
+<form action="Order.html" method ="post" name ="myform" onsubmit="return validateform()" >
+<h4>Total Amount</h4></td>
+<td><input type="text" name="amount">
+</td>
+</tr>
+<tr>
+<td><h4>Credit Card Number</td>
+<td><input type="text" name ="cnum"></td>
+</tr>
+
+<tr>
+<td><h4>IFSC Code</td>
+<td><input type="text" name = "ifsc"></td>
+</tr>
+<tr>
+<td><h4>Expiry Date:</td>
+<td><input type ="month" value ="mmyy" name = "expiry"></td>
+
+
+<tr>
+
+
+<tr>
+<td><h4>Address</td>
+<td><textarea id="w3review" name="address" rows="4" cols="50" ></textarea>
+
+<tr>
+<tr>
+<td>
+</td>
+
+<td><input type="submit" value=OK>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+
