@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>LOGIN</title>
+</head>
+<link rel="stylesheet" type="text/css" href="decoration.css">
+<script>function validateform(){  
+     var name=document.myform.loginId.value;  
+     var password=document.myform.password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+} 
+else if(password==null || password==""){
+	alert("Password should not be empty");
+	return false;
+}
+else if(password.length<6){  
+	  alert("Password must be at least 6 characters long.");  
+	  return false;  
+	  } 
+}  
+  </script>
+<body>
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@1,200&display=swap" rel="stylesheet">
+
+<div class="topnav">
+  <a class="active" href="homepage.html">Home</a>
+  
+  <a href="login.html">LOGIN</a>
+  
+  <a href="register.html">SIGNUP</a>
+  
+  <a href="UserProfile.html">PROFILE</a>
+  
+  <a href="bookscatalog.html">BooksCatalog</a>
+  <a href="Cart.html">Cart</a>
+  <a href="Payment.html">Payment</a>
+  
+ </div>
+ <br><br>
+
+
+<div class="block b2"><h2>Login</h2></div>
+
+<form name="myform" method="post" action="bookscatalog.html" onsubmit="return validateform()" >
+<div class = "survey">
+
+<div ><p>UserName</p><input type="text" placeholder="Enter UserName " name="loginId"class="border" ></div>
+
+
+
+<p>Password</p><input class = "border" type = "password" name="password" placeholder=" Enter your Password">
+
+
+
+<div><input type="submit"  value = "LoginIn" class="submit"></div><br>
+
+</form>
+
+<br><h5 class="b">Don't have an account?</h5><br>
+
+ <form method=post action="register.html">
+ 
+ <h4><input type="submit" value=SIGNUP ></h4>
+ 
+ <br>
+ 
+ </form>
+ 
+   </div>
+  
+
+
+
+
+
+
+</body>
+</html>
